@@ -34,3 +34,7 @@ TBA
 GDD
 ===
 Requires study of manual, gameplay, and reverse engineering data
+
+Amiga Version
+===
+Unknown at this stage. WHDLoad uses floppy disk images and the floppy disk is raw binary storage not regular filesystem. I suspect that general structure is the same but there is an extra layer of unknown structure that I don't want to deal with right now.
