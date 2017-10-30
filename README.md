@@ -1,5 +1,5 @@
-# Unity-Creation-of-a-Nation
-Various data for Unity RTS game from 1991
+# Utopia-Creation-of-a-Nation
+Various data for Utopia RTS game from 1991
 
 Purpose is to learn structure of how to create new content for the game.
 
