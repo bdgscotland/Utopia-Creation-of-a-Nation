@@ -4,6 +4,13 @@ import struct
 import array
 import os
 
+
+
+
+#0x102 - Free colonists
+#0x116 - Total colonists?
+
+
 ## CLI ARGUMENTS
 credits = sys.argv[2];
 sgpath  = sys.argv[1];
@@ -96,6 +103,8 @@ def read_qol(in_filename):
             bQOL.reverse();
             hQOL = binascii.hexlify(bQOL);
             iQOL = int(hQOL,16);
+
+            #0x1222
             
             fh.close();
             return iQOL;
@@ -148,7 +157,7 @@ def backup_file(in_filename):
 print("\nUtopia - Creation of a Nation Save Game Editor\n==============================================");
 backup_file(sgpath);    
 print("Game Date:\t\t\t%s" % read_gamedate(sgpath));
-print("Game QOL:\t\t\t%s" % read_qol(sgpath));
+print("Game QOL:\t\t\t%s (resets via algorithm)" % read_qol(sgpath));
 print("Colony Grant:\t\t\t%s (changes only last a single month currently)" % read_grant(sgpath));
 print("Read Credits (GR):\t\t%s" % read_credits(sgpath));
 write_credits(sgpath, credits);
