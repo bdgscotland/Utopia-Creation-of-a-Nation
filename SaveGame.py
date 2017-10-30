@@ -28,7 +28,7 @@ def read_credits(in_filename):
             bCreditsLE.reverse();
             hCredits = binascii.hexlify(bCreditsLE);
             iCredits = int(hCredits,16);
-            fh.close;
+            fh.close();
             return iCredits;
     else:
         SaveGameNUMERIC = False;
@@ -45,6 +45,7 @@ def write_credits(in_filename,out_credits):
             hCredits = binascii.hexlify(bCredits); 
             fh.seek(0x0586);
             fh.write(bCredits);
+            fh.close();
     else:
         SaveGameNUMERIC = False;
        
