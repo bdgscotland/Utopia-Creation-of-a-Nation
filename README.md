@@ -39,6 +39,10 @@ Art Extraction
 ===
 TBA
 
+Music
+===
+Amiga modules included. Play on Mac/PC via VLC.
+
 GDD
 ===
 Requires study of manual, gameplay, and reverse engineering data
