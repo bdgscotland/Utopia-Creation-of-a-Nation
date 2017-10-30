@@ -23,7 +23,7 @@ MBP:utopia duncan$ python python/SaveGame.py ./SAVEGAME.0 999999
 Utopia - Creation of a Nation Save Game Editor
 ==============================================
 Backup:				./SAVEGAME.0 backed up to ./SAVEGAME.0.BAK
-Game Date:			09/11/2091
+Game Date:			09/11/2091 (seems purely cosmetic)
 Game QOL:			45 (resets via algorithm)
 Colony Grant:			2500 (changes only last a single month currently)
 Read Credits (GR):		905250
