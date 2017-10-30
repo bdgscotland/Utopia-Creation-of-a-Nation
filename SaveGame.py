@@ -33,6 +33,37 @@ def read_credits(in_filename):
     else:
         SaveGameNUMERIC = False;
 
+def read_gamedate(in_filename):
+    # Game Date does not seem to cumulatively affect other items
+    # Other counters matter more, this seems to be aesthetic only
+    global SaveGameNUMERIC
+    if (os.stat(in_filename).st_size == SIZE_SAVENUM):
+        SaveGameNUMERIC = True;
+        with open(in_filename, 'rb') as fh:
+            fh.seek(0x1431); 
+            bDate = fh.read(10);
+            bDate.decode("utf-8");
+            fh.close();
+            return bDate;
+    else:
+        SaveGameNUMERIC = False;    
+
+def read_qol(in_filename):
+    global SaveGameNUMERIC
+    if (os.stat(in_filename).st_size == SIZE_SAVENUM):
+        SaveGameNUMERIC = True;
+        with open(in_filename, 'rb') as fh:
+            fh.seek(0x11fc); # qol
+            bQOL = fh.read(2);
+            bQOL = bytearray(bQOL); # little endian
+            bQOL.reverse();
+            hQOL = binascii.hexlify(bQOL);
+            iQOL = int(hQOL,16);
+            
+            fh.close();
+            return iQOL;
+    else:
+        SaveGameNUMERIC = False;    
 
         
 def write_credits(in_filename,out_credits):
@@ -77,10 +108,13 @@ def backup_file(in_filename):
 ## MAIN
 print("\nUtopia - Creation of a Nation Save Game Editor\n==============================================");
 backup_file(sgpath);    
+print("Game Date:\t\t\t%s" % read_gamedate(sgpath));
+print("Game QOL:\t\t\t%s" % read_qol(sgpath));
 print("Read Credits (GR):\t\t%s" % read_credits(sgpath));
 write_credits(sgpath, credits);
 if (SaveGameNUMERIC == True):
     print("Written Credits (GR):\t\t%s" % read_credits(sgpath));
+
 
 
 
