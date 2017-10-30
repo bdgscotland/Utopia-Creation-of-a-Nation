@@ -21,10 +21,12 @@ Save Game Trainer
 DMBP:utopia duncan$ python python/SaveGame.py ./SAVEGAME.0 999999
 
 Utopia - Creation of a Nation Save Game Editor
+==============================================
 Backup:				./SAVEGAME.0 backed up to ./SAVEGAME.0.BAK
-Read Credits (GR):		45040
+Game Date:			12/12/1990
+Game QOL:			120
+Read Credits (GR):		999999
 Written Credits (GR):		999999
-DMBP:utopia duncan$
 ```
 
 Game Remake
