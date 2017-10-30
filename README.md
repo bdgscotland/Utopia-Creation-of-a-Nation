@@ -18,15 +18,15 @@ TBA
 Save Game Trainer
 ===
 ```
-DMBP:utopia duncan$ python python/SaveGame.py ./SAVEGAME.0 999999
+MBP:utopia duncan$ python python/SaveGame.py ./SAVEGAME.0 999999
 
 Utopia - Creation of a Nation Save Game Editor
 ==============================================
 Backup:				./SAVEGAME.0 backed up to ./SAVEGAME.0.BAK
-Game Date:			25/12/2090
-Game QOL:			120
-Colony Grant:			50000 (changes only last a single month currently)
-Read Credits (GR):		999999
+Game Date:			09/11/2091
+Game QOL:			45 (resets via algorithm)
+Colony Grant:			2500 (changes only last a single month currently)
+Read Credits (GR):		905250
 ------------
 Written Credits (GR):		999999
 Written QOL:			120
